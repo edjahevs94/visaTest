@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-paymentTest/Pods-paymentTest-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${PODS_ROOT}/VisaNetSDKiOS/VisaNetSDK.framework

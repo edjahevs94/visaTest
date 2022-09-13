@@ -7,15 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58AC17A60562784E884A2871 /* Pods_paymentTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FCD3BD6811097E026C488DC /* Pods_paymentTest.framework */; };
 		BE44B9B928D0FF3E00DC73E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE44B9B828D0FF3E00DC73E7 /* AppDelegate.swift */; };
 		BE44B9BB28D0FF3E00DC73E7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE44B9BA28D0FF3E00DC73E7 /* SceneDelegate.swift */; };
 		BE44B9BD28D0FF3E00DC73E7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE44B9BC28D0FF3E00DC73E7 /* ViewController.swift */; };
 		BE44B9C028D0FF3E00DC73E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE44B9BE28D0FF3E00DC73E7 /* Main.storyboard */; };
 		BE44B9C228D0FF3F00DC73E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE44B9C128D0FF3F00DC73E7 /* Assets.xcassets */; };
 		BE44B9C528D0FF3F00DC73E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE44B9C328D0FF3F00DC73E7 /* LaunchScreen.storyboard */; };
+		BE44B9D228D11BC000DC73E7 /* CardinalMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE44B9D028D11BAA00DC73E7 /* CardinalMobile.framework */; };
+		BE44B9D328D11BC000DC73E7 /* CardinalMobile.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BE44B9D028D11BAA00DC73E7 /* CardinalMobile.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BE44B9D528D11BC300DC73E7 /* TMXProfiling.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE44B9CC28D11B9E00DC73E7 /* TMXProfiling.framework */; };
+		BE44B9D628D11BC300DC73E7 /* TMXProfiling.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BE44B9CC28D11B9E00DC73E7 /* TMXProfiling.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BE44B9D728D11BC500DC73E7 /* TMXProfilingConnections.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE44B9CD28D11B9E00DC73E7 /* TMXProfilingConnections.framework */; };
+		BE44B9D828D11BC500DC73E7 /* TMXProfilingConnections.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BE44B9CD28D11B9E00DC73E7 /* TMXProfilingConnections.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BE44B9DB28D11C7400DC73E7 /* OriginData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE44B9DA28D11C7400DC73E7 /* OriginData.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		BE44B9D428D11BC000DC73E7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BE44B9D328D11BC000DC73E7 /* CardinalMobile.framework in Embed Frameworks */,
+				BE44B9D828D11BC500DC73E7 /* TMXProfilingConnections.framework in Embed Frameworks */,
+				BE44B9D628D11BC300DC73E7 /* TMXProfiling.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		7FCD3BD6811097E026C488DC /* Pods_paymentTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_paymentTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE44B9B528D0FF3E00DC73E7 /* paymentTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = paymentTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE44B9B828D0FF3E00DC73E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE44B9BA28D0FF3E00DC73E7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +49,12 @@
 		BE44B9C128D0FF3F00DC73E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE44B9C428D0FF3F00DC73E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE44B9C628D0FF3F00DC73E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE44B9CC28D11B9E00DC73E7 /* TMXProfiling.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TMXProfiling.framework; sourceTree = "<group>"; };
+		BE44B9CD28D11B9E00DC73E7 /* TMXProfilingConnections.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TMXProfilingConnections.framework; sourceTree = "<group>"; };
+		BE44B9D028D11BAA00DC73E7 /* CardinalMobile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CardinalMobile.framework; sourceTree = "<group>"; };
+		BE44B9DA28D11C7400DC73E7 /* OriginData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginData.swift; sourceTree = "<group>"; };
+		C80CA1E6C36195F4952A96C0 /* Pods-paymentTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-paymentTest.debug.xcconfig"; path = "Target Support Files/Pods-paymentTest/Pods-paymentTest.debug.xcconfig"; sourceTree = "<group>"; };
+		F7D2C7195FB1EA315E02E5EE /* Pods-paymentTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-paymentTest.release.xcconfig"; path = "Target Support Files/Pods-paymentTest/Pods-paymentTest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +62,40 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58AC17A60562784E884A2871 /* Pods_paymentTest.framework in Frameworks */,
+				BE44B9D728D11BC500DC73E7 /* TMXProfilingConnections.framework in Frameworks */,
+				BE44B9D528D11BC300DC73E7 /* TMXProfiling.framework in Frameworks */,
+				BE44B9D228D11BC000DC73E7 /* CardinalMobile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6AECCF494950D95651A07843 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7FCD3BD6811097E026C488DC /* Pods_paymentTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B45C1CE2F6CC316716866345 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C80CA1E6C36195F4952A96C0 /* Pods-paymentTest.debug.xcconfig */,
+				F7D2C7195FB1EA315E02E5EE /* Pods-paymentTest.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		BE44B9AC28D0FF3E00DC73E7 = {
 			isa = PBXGroup;
 			children = (
 				BE44B9B728D0FF3E00DC73E7 /* paymentTest */,
 				BE44B9B628D0FF3E00DC73E7 /* Products */,
+				B45C1CE2F6CC316716866345 /* Pods */,
+				6AECCF494950D95651A07843 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +110,9 @@
 		BE44B9B728D0FF3E00DC73E7 /* paymentTest */ = {
 			isa = PBXGroup;
 			children = (
+				BE44B9CC28D11B9E00DC73E7 /* TMXProfiling.framework */,
+				BE44B9D028D11BAA00DC73E7 /* CardinalMobile.framework */,
+				BE44B9CD28D11B9E00DC73E7 /* TMXProfilingConnections.framework */,
 				BE44B9B828D0FF3E00DC73E7 /* AppDelegate.swift */,
 				BE44B9BA28D0FF3E00DC73E7 /* SceneDelegate.swift */,
 				BE44B9BC28D0FF3E00DC73E7 /* ViewController.swift */,
@@ -63,6 +120,7 @@
 				BE44B9C128D0FF3F00DC73E7 /* Assets.xcassets */,
 				BE44B9C328D0FF3F00DC73E7 /* LaunchScreen.storyboard */,
 				BE44B9C628D0FF3F00DC73E7 /* Info.plist */,
+				BE44B9DA28D11C7400DC73E7 /* OriginData.swift */,
 			);
 			path = paymentTest;
 			sourceTree = "<group>";
@@ -74,9 +132,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BE44B9C928D0FF3F00DC73E7 /* Build configuration list for PBXNativeTarget "paymentTest" */;
 			buildPhases = (
+				2F57124C14C7D32B45B13DF6 /* [CP] Check Pods Manifest.lock */,
 				BE44B9B128D0FF3E00DC73E7 /* Sources */,
 				BE44B9B228D0FF3E00DC73E7 /* Frameworks */,
 				BE44B9B328D0FF3E00DC73E7 /* Resources */,
+				026ADEAF0F461013255B9417 /* [CP] Embed Pods Frameworks */,
+				BE44B9D428D11BC000DC73E7 /* Embed Frameworks */,
+				BE44B9D928D11C0100DC73E7 /* Strip ThreatMetrix framework */,
 			);
 			buildRules = (
 			);
@@ -133,12 +195,73 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		026ADEAF0F461013255B9417 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-paymentTest/Pods-paymentTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-paymentTest/Pods-paymentTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-paymentTest/Pods-paymentTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2F57124C14C7D32B45B13DF6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-paymentTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE44B9D928D11C0100DC73E7 /* Strip ThreatMetrix framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Strip ThreatMetrix framework";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nAPP_PATH=\"${TARGET_BUILD_DIR}/${WRAPPER_NAME}\"\n\nfind \"$APP_PATH\" -name 'TMX*.framework' -type d | while read -r FRAMEWORK; do\n    FRAMEWORK_EXECUTABLE_NAME=$(defaults read \"$FRAMEWORK/Info.plist\" CFBundleExecutable)\n    FRAMEWORK_EXECUTABLE_PATH=\"$FRAMEWORK/$FRAMEWORK_EXECUTABLE_NAME\"\n\n    EXTRACTED_ARCHS=()\n\n    for ARCH in $ARCHS; do\n        lipo -extract \"$ARCH\" \"$FRAMEWORK_EXECUTABLE_PATH\" -o \"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\"\n        EXTRACTED_ARCHS+=(\"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\")\n    done\n\n    lipo -o \"$FRAMEWORK_EXECUTABLE_PATH-merged\" -create \"${EXTRACTED_ARCHS[@]}\"\n    rm \"${EXTRACTED_ARCHS[@]}\"\n\n    rm \"$FRAMEWORK_EXECUTABLE_PATH\"\n    mv \"$FRAMEWORK_EXECUTABLE_PATH-merged\" \"$FRAMEWORK_EXECUTABLE_PATH\"\n\ndone\n\nfind \"$APP_PATH\" -name 'CardinalMobile.framework' -type d | while read -r FRAMEWORK; do\n    FRAMEWORK_EXECUTABLE_NAME=$(defaults read \"$FRAMEWORK/Info.plist\" CFBundleExecutable)\n    FRAMEWORK_EXECUTABLE_PATH=\"$FRAMEWORK/$FRAMEWORK_EXECUTABLE_NAME\"\n\n    EXTRACTED_ARCHS=()\n\n    for ARCH in $ARCHS; do\n        lipo -extract \"$ARCH\" \"$FRAMEWORK_EXECUTABLE_PATH\" -o \"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\"\n        EXTRACTED_ARCHS+=(\"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\")\n    done\n\n    lipo -o \"$FRAMEWORK_EXECUTABLE_PATH-merged\" -create \"${EXTRACTED_ARCHS[@]}\"\n    rm \"${EXTRACTED_ARCHS[@]}\"\n\n    rm \"$FRAMEWORK_EXECUTABLE_PATH\"\n    mv \"$FRAMEWORK_EXECUTABLE_PATH-merged\" \"$FRAMEWORK_EXECUTABLE_PATH\"\ndone\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BE44B9B128D0FF3E00DC73E7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				BE44B9BD28D0FF3E00DC73E7 /* ViewController.swift in Sources */,
+				BE44B9DB28D11C7400DC73E7 /* OriginData.swift in Sources */,
 				BE44B9B928D0FF3E00DC73E7 /* AppDelegate.swift in Sources */,
 				BE44B9BB28D0FF3E00DC73E7 /* SceneDelegate.swift in Sources */,
 			);
@@ -216,7 +339,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -270,7 +393,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -282,12 +405,18 @@
 		};
 		BE44B9CA28D0FF3F00DC73E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C80CA1E6C36195F4952A96C0 /* Pods-paymentTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = P8J2DS2Z2V;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/paymentTest",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = paymentTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -295,6 +424,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,17 +435,24 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_WORKSPACE = YES;
 			};
 			name = Debug;
 		};
 		BE44B9CB28D0FF3F00DC73E7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7D2C7195FB1EA315E02E5EE /* Pods-paymentTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = P8J2DS2Z2V;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/paymentTest",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = paymentTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -323,6 +460,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -333,6 +471,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_WORKSPACE = YES;
 			};
 			name = Release;
 		};
