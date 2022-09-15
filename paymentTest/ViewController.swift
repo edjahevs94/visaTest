@@ -8,13 +8,26 @@
 import UIKit
 import VisaNetSDK
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, VisaNetDelegate {
+    func registrationDidEnd(serverError: Any?, responseData: Any?) {
+        //
+        if serverError == nil {
+               /* Do Something
+               with responseData*/
+                print(responseData!)
+               }
+               else {
+               /* Do Something with NSError */
+                   print(serverError!)
+               }
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        
+       // let url = URL(string: )
     }
     
     
@@ -31,16 +44,27 @@ class ViewController: UIViewController {
         
         }
     }
-    
+    //esta si funciona
     func presentVisa(with token: String) {
-        Config.CE.dataChannel = .mobile
         Config.securityToken = token
+        Config.CE.dataChannel = .mobile
+        Config.CE.endPointDevURL = "https://apitestenv.vnforapps.com"
+        //Config.CE.endPointProdURL = "https://apirod.vnforapps.com/"
         Config.merchantID = "341198210"
         Config.CE.purchaseNumber = "1790"
+        Config.CE.type = .dev
         Config.PINSHA256DEV = "D6rSeGVZdgfsMVIUabjeGDzS7YvLVp7pbnRhCggz/B4="
         Config.amount = 15.22
-        _ = VisaNet.shared.presentVisaPaymentForm(viewController: self)
         
+        var mdd = [String:Any]()
+        mdd["MDD4"] = "341198210"
+        mdd["MDD32"] = "1790"
+        mdd["MDD75"] = ""
+        Config.CE.Antifraud.merchantDefineData = mdd
+
+        
+        _ = VisaNet.shared.presentVisaPaymentForm(viewController: self)
+        VisaNet.shared.delegate = self
         
     }
 
