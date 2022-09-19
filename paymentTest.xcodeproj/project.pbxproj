@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		58AC17A60562784E884A2871 /* Pods_paymentTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FCD3BD6811097E026C488DC /* Pods_paymentTest.framework */; };
+		BE2CA01928D8FA24005A31AB /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2CA01828D8FA24005A31AB /* ResultViewController.swift */; };
 		BE44B9B928D0FF3E00DC73E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE44B9B828D0FF3E00DC73E7 /* AppDelegate.swift */; };
 		BE44B9BB28D0FF3E00DC73E7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE44B9BA28D0FF3E00DC73E7 /* SceneDelegate.swift */; };
 		BE44B9BD28D0FF3E00DC73E7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE44B9BC28D0FF3E00DC73E7 /* ViewController.swift */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		7FCD3BD6811097E026C488DC /* Pods_paymentTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_paymentTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE2CA01828D8FA24005A31AB /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		BE44B9B528D0FF3E00DC73E7 /* paymentTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = paymentTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE44B9B828D0FF3E00DC73E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE44B9BA28D0FF3E00DC73E7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				BE44B9C328D0FF3F00DC73E7 /* LaunchScreen.storyboard */,
 				BE44B9C628D0FF3F00DC73E7 /* Info.plist */,
 				BE44B9DA28D11C7400DC73E7 /* OriginData.swift */,
+				BE2CA01828D8FA24005A31AB /* ResultViewController.swift */,
 			);
 			path = paymentTest;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE2CA01928D8FA24005A31AB /* ResultViewController.swift in Sources */,
 				BE44B9BD28D0FF3E00DC73E7 /* ViewController.swift in Sources */,
 				BE44B9DB28D11C7400DC73E7 /* OriginData.swift in Sources */,
 				BE44B9B928D0FF3E00DC73E7 /* AppDelegate.swift in Sources */,

@@ -9,18 +9,10 @@ import UIKit
 import VisaNetSDK
 
 class ViewController: UIViewController, VisaNetDelegate {
-    func registrationDidEnd(serverError: Any?, responseData: Any?) {
-        //
-        if serverError == nil {
-               /* Do Something
-               with responseData*/
-                print(responseData!)
-               }
-               else {
-               /* Do Something with NSError */
-                   print("error obteniendo trama de respuesta: \(serverError!)")
-               }
-    }
+    
+    var  paymentInfo: [String:Any]?
+    var tokenEmail: String = ""
+ 
     
 
     override func viewDidLoad() {
@@ -29,6 +21,41 @@ class ViewController: UIViewController, VisaNetDelegate {
        
        // let url = URL(string: )
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        if segue.identifier == "resultSegue" {
+            let destinationVC = segue.destination as! ResultViewController
+            destinationVC.info = paymentInfo
+        }
+    }
+    
+    func registrationDidEnd(serverError: Any?, responseData: Any?) {
+        //
+        if serverError == nil {
+            /* Do Something
+             with responseData*/
+            //print(responseData!)
+            guard let result = responseData as? [String:Any] else { return }
+            //print("solo un elemento: \(result["EMAIL"]!)")
+            if let email = result["EMAIL"] as? String {
+                tokenEmail = email
+            }
+            paymentInfo = result
+            //print(paymentInfo!)
+            //if let sendData = paymentInfo {
+                //print(sendData)
+                performSegue(withIdentifier: "resultSegue", sender: self)
+                
+            //}
+          
+        } else {
+                /* Do Something with NSError */
+                print("error obteniendo trama de respuesta: \(serverError!)")
+            }
+            
+        }
     
     
     @IBAction func payButton(_ sender: UIButton) {
@@ -55,7 +82,7 @@ class ViewController: UIViewController, VisaNetDelegate {
         Config.CE.type = .dev
         Config.PINSHA256DEV = "D6rSeGVZdgfsMVIUabjeGDzS7YvLVp7pbnRhCggz/B4="
         Config.amount = 15.22
-        //Config.tokenizationEmail = "example@example.com"
+        Config.tokenizationEmail = tokenEmail
         var mdd = [String:Any]()
         mdd["MDD4"] = "341198210"
         mdd["MDD32"] = "1790"
