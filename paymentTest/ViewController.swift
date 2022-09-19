@@ -18,7 +18,7 @@ class ViewController: UIViewController, VisaNetDelegate {
                }
                else {
                /* Do Something with NSError */
-                   print(serverError!)
+                   print("error obteniendo trama de respuesta: \(serverError!)")
                }
     }
     
@@ -26,7 +26,7 @@ class ViewController: UIViewController, VisaNetDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+       
        // let url = URL(string: )
     }
     
@@ -55,7 +55,7 @@ class ViewController: UIViewController, VisaNetDelegate {
         Config.CE.type = .dev
         Config.PINSHA256DEV = "D6rSeGVZdgfsMVIUabjeGDzS7YvLVp7pbnRhCggz/B4="
         Config.amount = 15.22
-        
+        //Config.tokenizationEmail = "example@example.com"
         var mdd = [String:Any]()
         mdd["MDD4"] = "341198210"
         mdd["MDD32"] = "1790"
