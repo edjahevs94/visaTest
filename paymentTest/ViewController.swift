@@ -77,14 +77,14 @@ class ViewController: UIViewController, VisaNetDelegate {
         Config.CE.dataChannel = .mobile
         Config.CE.endPointDevURL = "https://apitestenv.vnforapps.com"
         //Config.CE.endPointProdURL = "https://apirod.vnforapps.com/"
-        Config.merchantID = "341198210"
+        Config.merchantID = "456879852"
         Config.CE.purchaseNumber = "1790"
         Config.CE.type = .dev
         Config.PINSHA256DEV = "D6rSeGVZdgfsMVIUabjeGDzS7YvLVp7pbnRhCggz/B4="
         Config.amount = 15.22
         Config.tokenizationEmail = tokenEmail
         var mdd = [String:Any]()
-        mdd["MDD4"] = "341198210"
+        mdd["MDD4"] = "456879852"
         mdd["MDD32"] = "1790"
         mdd["MDD75"] = ""
         Config.CE.Antifraud.merchantDefineData = mdd
