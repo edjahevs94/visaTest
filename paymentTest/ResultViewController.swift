@@ -34,7 +34,7 @@ class ResultViewController: UIViewController {
         super.viewDidLoad()
         
         if let safeInfo = info {
-            print(safeInfo)
+            
             actionCode.text = safeInfo["ACTION_CODE"] as? String
             actionDescription.text = safeInfo["ACTION_DESCRIPTION"] as? String
             firstName.text = safeInfo["FIRST_NAME"] as? String

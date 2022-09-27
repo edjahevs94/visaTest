@@ -11,7 +11,7 @@ import VisaNetSDK
 class ViewController: UIViewController, VisaNetDelegate {
     
     var  paymentInfo: [String:Any]?
-    var tokenEmail: String = ""
+    var tokenEmail: String = " "
  
     
 
@@ -33,27 +33,35 @@ class ViewController: UIViewController, VisaNetDelegate {
     
     func registrationDidEnd(serverError: Any?, responseData: Any?) {
         //
-        if serverError == nil {
+       // if serverError == nil {
             /* Do Something
              with responseData*/
-            //print(responseData!)
-            guard let result = responseData as? [String:Any] else { return }
-            //print("solo un elemento: \(result["EMAIL"]!)")
+        print(responseData!)
+        guard let result = responseData as? [String:Any] else { return }
+            //print("solo un elemento trama buena: \(result["ACTION_CODE"]!)")
+        if result["data"] != nil {
+            if let errorResult = result["data"] as? [String:Any] {
+                //print("solo un elemento trama error: \(errorResult["ACTION_CODE"]!)")
+                paymentInfo = errorResult
+                performSegue(withIdentifier: "resultSegue", sender: self)
+            }
+        }
+         else {
             if let email = result["EMAIL"] as? String {
                 tokenEmail = email
             }
             paymentInfo = result
             //print(paymentInfo!)
             //if let sendData = paymentInfo {
-                //print(sendData)
-                performSegue(withIdentifier: "resultSegue", sender: self)
-                
+            //print(sendData)
+            performSegue(withIdentifier: "resultSegue", sender: self)
+        }
             //}
           
-        } else {
+        //} else {
                 /* Do Something with NSError */
-                print("error obteniendo trama de respuesta: \(serverError!)")
-            }
+               // print("error obteniendo trama de respuesta: \(serverError!)")
+            //}
             
         }
     
@@ -75,16 +83,16 @@ class ViewController: UIViewController, VisaNetDelegate {
     func presentVisa(with token: String) {
         Config.securityToken = token
         Config.CE.dataChannel = .mobile
-        Config.CE.endPointDevURL = "https://apitestenv.vnforapps.com"
+        Config.CE.endPointDevURL = "https://apisandbox.vnforappstest.com"
         //Config.CE.endPointProdURL = "https://apirod.vnforapps.com/"
-        Config.merchantID = "456879852"
+        Config.merchantID = "456879854"
         Config.CE.purchaseNumber = "1790"
         Config.CE.type = .dev
-        Config.PINSHA256DEV = "D6rSeGVZdgfsMVIUabjeGDzS7YvLVp7pbnRhCggz/B4="
+        Config.PINSHA256DEV = "/qBarks2zOfhXY729wSQ+PwG/xU7k998x9XJC2W+hOs="
         Config.amount = 15.22
         Config.tokenizationEmail = tokenEmail
         var mdd = [String:Any]()
-        mdd["MDD4"] = "456879852"
+        mdd["MDD4"] = "456879854"
         mdd["MDD32"] = "1790"
         mdd["MDD75"] = ""
         Config.CE.Antifraud.merchantDefineData = mdd
