@@ -11,8 +11,8 @@ import VisaNetSDK
 class ViewController: UIViewController, VisaNetDelegate {
     
     var  paymentInfo: [String:Any]?
+    //var tokenEmail: String = "itlab@ulima.edu.pe"
     var tokenEmail: String = " "
- 
     
 
     override func viewDidLoad() {
@@ -36,32 +36,35 @@ class ViewController: UIViewController, VisaNetDelegate {
        // if serverError == nil {
             /* Do Something
              with responseData*/
-        print(responseData!)
-        guard let result = responseData as? [String:Any] else { return }
-            //print("solo un elemento trama buena: \(result["ACTION_CODE"]!)")
-        if result["data"] != nil {
-            if let errorResult = result["data"] as? [String:Any] {
-                //print("solo un elemento trama error: \(errorResult["ACTION_CODE"]!)")
-                paymentInfo = errorResult
+        if responseData != nil {
+            print(responseData!)
+            guard let result = responseData as? [String:Any] else { return }
+                //print("solo un elemento trama buena: \(result["ACTION_CODE"]!)")
+            if result["data"] != nil {
+                if let errorResult = result["data"] as? [String:Any] {
+                    //print("solo un elemento trama error: \(errorResult["ACTION_CODE"]!)")
+                    paymentInfo = errorResult
+                    performSegue(withIdentifier: "resultSegue", sender: self)
+                }
+            }
+             else {
+                if let email = result["VAULT_BLOCK"] as? String {
+                    tokenEmail = email
+                }
+                paymentInfo = result
+                //print(paymentInfo!)
+                //if let sendData = paymentInfo {
+                //print(sendData)
                 performSegue(withIdentifier: "resultSegue", sender: self)
             }
+                //}
+              
+            //} else {
+                    /* Do Something with NSError */
+                   // print("error obteniendo trama de respuesta: \(serverError!)")
+                //}
         }
-         else {
-            if let email = result["EMAIL"] as? String {
-                tokenEmail = email
-            }
-            paymentInfo = result
-            //print(paymentInfo!)
-            //if let sendData = paymentInfo {
-            //print(sendData)
-            performSegue(withIdentifier: "resultSegue", sender: self)
-        }
-            //}
-          
-        //} else {
-                /* Do Something with NSError */
-               // print("error obteniendo trama de respuesta: \(serverError!)")
-            //}
+       
             
         }
     
@@ -84,7 +87,7 @@ class ViewController: UIViewController, VisaNetDelegate {
         Config.securityToken = token
         Config.CE.dataChannel = .mobile
         Config.CE.endPointDevURL = "https://apisandbox.vnforappstest.com"
-        //Config.CE.endPointProdURL = "https://apirod.vnforapps.com/"
+        //Config.CE.endPointProdURL = "https://apirod.vnforapps.com"
         Config.merchantID = "456879854"
         Config.CE.purchaseNumber = "1790"
         Config.CE.type = .dev
@@ -96,7 +99,8 @@ class ViewController: UIViewController, VisaNetDelegate {
         mdd["MDD32"] = "1790"
         mdd["MDD75"] = ""
         Config.CE.Antifraud.merchantDefineData = mdd
-
+        Config.CE.email = tokenEmail
+        Config.CE.Header.logoImage = UIImage(named: "logo")
         
         _ = VisaNet.shared.presentVisaPaymentForm(viewController: self)
         VisaNet.shared.delegate = self
